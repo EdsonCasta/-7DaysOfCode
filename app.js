@@ -119,3 +119,6 @@ function iniciarJuego() {
 }
 
 iniciarJuego();
+
+// Desafio dia 4
+
