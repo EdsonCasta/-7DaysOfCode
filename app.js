@@ -25,7 +25,7 @@ if (numeroUn == stringUn) {
 
 }
 
- 
+
 
 if (numeroTreinta === stringTreinta) {
 
@@ -37,7 +37,7 @@ if (numeroTreinta === stringTreinta) {
 
 }
 
- 
+
 
 if (numeroDiez == stringDiez) {
 
@@ -63,7 +63,7 @@ console.log(`Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${leng
 
 function respuesta() {
   let pregunta = prompt(`¿Te gusta estudiar ${lenguaje}? Responde con el número 1 para SÍ o 2 para NO.`);
-  
+
   if (pregunta == 1) {
     console.log("1 > ¡Muy bien! Sigue estudiando y tendrás mucho éxito.")
   } else if (pregunta == 2) {
@@ -122,3 +122,27 @@ iniciarJuego();
 
 // Desafio dia 4
 
+let min = 1;
+let max = 10;
+let num = parseInt(prompt("Ingrese un número del 1 al 10"));
+
+function adividaNum() {
+  let numSorteado = Math.floor(Math.random() * (max - min + 1) + min);
+  console.log("numero sorteado:", numSorteado);
+  let intentos = 0;
+
+  while (intentos < 3) {
+    if (numSorteado === num) {
+      alert("¡Felicitaciones, acertaste!");
+      return;
+    } else {
+      num = parseInt(prompt(`Intento ${intentos + 1}: Número incorrecto. Intenta nuevamente:`));
+    }
+    intentos++;
+  }
+
+  alert("¡Lo siento! Has agotado tus intentos. El número era" + numSorteado);
+
+};
+
+adividaNum()
