@@ -1,151 +1,151 @@
-// // Desafio dia 01
+// Desafio dia 01
 
-// let numeroUn = 1    
+let numeroUn = 1    
 
-// let stringUn = '1'
+let stringUn = '1'
 
-// let numeroTreinta = 30
+let numeroTreinta = 30
 
-// let stringTreinta = '30'
+let stringTreinta = '30'
 
-// let numeroDiez = 10
+let numeroDiez = 10
 
-// let stringDiez = '10'
-
-
-
-
-// if (numeroUn == stringUn) {
-
-//   console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')
-
-// } else {
-
-//   console.log('Las variables numeroUn y stringUn no tienen el mismo valor')
-
-// }
+let stringDiez = '10'
 
 
 
-// if (numeroTreinta === stringTreinta) {
 
-//   console.log('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')
+if (numeroUn == stringUn) {
 
-// } else {
+  console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')
 
-//   console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
+} else {
 
-// }
+  console.log('Las variables numeroUn y stringUn no tienen el mismo valor')
+
+}
 
 
 
-// if (numeroDiez == stringDiez) {
+if (numeroTreinta === stringTreinta) {
 
-//   console.log('Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes')
+  console.log('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')
 
-// } else {
+} else {
 
-//   console.log('Las variables numeroDiez y stringDiez no tienen el mismo valor')
+  console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
 
-// }
+}
 
-// // Desafio dia 02
 
-// let nombre = prompt("¿Cuál es tu nombre?");
 
-// let edad = prompt("¿Cuántos años tienes?");
+if (numeroDiez == stringDiez) {
 
-// let lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?");
+  console.log('Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes')
 
-// console.log(`Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`);
+} else {
 
-// // EJERCICIO OPCIONAL
+  console.log('Las variables numeroDiez y stringDiez no tienen el mismo valor')
 
-// function respuesta() {
-//   let pregunta = prompt(`¿Te gusta estudiar ${lenguaje}? Responde con el número 1 para SÍ o 2 para NO.`);
+}
 
-//   if (pregunta == 1) {
-//     console.log("1 > ¡Muy bien! Sigue estudiando y tendrás mucho éxito.")
-//   } else if (pregunta == 2) {
-//     console.log("2 > Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?")
-//   } else {
-//     alert("Ingrese solo 1 o 2 dependiendo su respuesta.");
-//     respuesta();
-//   }
-// };
+// Desafio dia 02
 
-// respuesta();
+let nombre = prompt("¿Cuál es tu nombre?");
 
-// // Desafio dia 3
+let edad = prompt("¿Cuántos años tienes?");
 
-// function iniciarJuego() {
+let lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?");
 
-//   let area = prompt("¿Quieres seguir en el área de Front-End o Back-End? (Escribe 'Front-End' o 'Back-End')").toLowerCase();
+console.log(`Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`);
 
-//   if (area === "front-end") {
-//     let tecnologia = prompt("¿Quieres aprender React o Vue? (Escribe 'React' o 'Vue')").toLowerCase();
-//     alert(`¡Genial! Aprender ${tecnologia} te ayudará a desarrollar interfaces interactivas.`);
-//   } else if (area === "back-end") {
-//     let tecnologia = prompt("¿Quieres aprender C# o Java? (Escribe 'C#' o 'Java')").toLowerCase();
-//     alert(`¡Genial! Aprender ${tecnologia} te ayudará a desarrollar servidores y bases de datos.`);
-//   } else {
-//     alert("Debes escribir 'Front-End' o 'Back-End'. Inténtalo de nuevo.");
-//     return iniciarJuego();
-//   }
+// EJERCICIO OPCIONAL
 
-//   let especializacion = prompt("¿Quieres especializarte en el área elegida o convertirte en Fullstack? (Escribe 'Especializarme' o 'Fullstack')").toLowerCase();
+function respuesta() {
+  let pregunta = prompt(`¿Te gusta estudiar ${lenguaje}? Responde con el número 1 para SÍ o 2 para NO.`);
 
-//   if (especializacion === "especializarme") {
-//     alert("¡Buena elección! La especialización te permitirá ser un experto en tu área.");
-//   } else if (especializacion === "fullstack") {
-//     alert("¡Increíble! Convertirse en Fullstack te dará más oportunidades en el mercado.");
-//   } else {
-//     alert("Debes escribir 'Especializarme' o 'Fullstack'.");
-//   }
+  if (pregunta == 1) {
+    console.log("1 > ¡Muy bien! Sigue estudiando y tendrás mucho éxito.")
+  } else if (pregunta == 2) {
+    console.log("2 > Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?")
+  } else {
+    alert("Ingrese solo 1 o 2 dependiendo su respuesta.");
+    respuesta();
+  }
+};
 
-//   let tecnologias = [];
-//   while (true) {
-//     let nuevaTecnologia = prompt("¿Hay alguna otra tecnología que te gustaría aprender? (Escribe la tecnología o 'ok' para salir)").toLowerCase();
+respuesta();
 
-//     if (nuevaTecnologia === "ok") {
-//       break;
-//     }
+// Desafio dia 3
 
-//     tecnologias.push(nuevaTecnologia);
-//     alert(`¡Genial! Aprender ${nuevaTecnologia} te abrirá nuevas oportunidades.`);
-//   }
+function iniciarJuego() {
 
-//   alert(`Resumen de tu aprendizaje: \nÁrea elegida: ${area}\nEspecialización: ${especializacion}\nTecnologías adicionales: ${tecnologias.join(", ")}`);
-// }
+  let area = prompt("¿Quieres seguir en el área de Front-End o Back-End? (Escribe 'Front-End' o 'Back-End')").toLowerCase();
 
-// iniciarJuego();
+  if (area === "front-end") {
+    let tecnologia = prompt("¿Quieres aprender React o Vue? (Escribe 'React' o 'Vue')").toLowerCase();
+    alert(`¡Genial! Aprender ${tecnologia} te ayudará a desarrollar interfaces interactivas.`);
+  } else if (area === "back-end") {
+    let tecnologia = prompt("¿Quieres aprender C# o Java? (Escribe 'C#' o 'Java')").toLowerCase();
+    alert(`¡Genial! Aprender ${tecnologia} te ayudará a desarrollar servidores y bases de datos.`);
+  } else {
+    alert("Debes escribir 'Front-End' o 'Back-End'. Inténtalo de nuevo.");
+    return iniciarJuego();
+  }
 
-// // Desafio dia 4
+  let especializacion = prompt("¿Quieres especializarte en el área elegida o convertirte en Fullstack? (Escribe 'Especializarme' o 'Fullstack')").toLowerCase();
 
-// let min = 1;
-// let max = 10;
-// let num = parseInt(prompt("Ingrese un número del 1 al 10"));
+  if (especializacion === "especializarme") {
+    alert("¡Buena elección! La especialización te permitirá ser un experto en tu área.");
+  } else if (especializacion === "fullstack") {
+    alert("¡Increíble! Convertirse en Fullstack te dará más oportunidades en el mercado.");
+  } else {
+    alert("Debes escribir 'Especializarme' o 'Fullstack'.");
+  }
 
-// function adividaNum() {
-//   let numSorteado = Math.floor(Math.random() * (max - min + 1) + min);
-//   console.log("numero sorteado:", numSorteado);
-//   let intentos = 0;
+  let tecnologias = [];
+  while (true) {
+    let nuevaTecnologia = prompt("¿Hay alguna otra tecnología que te gustaría aprender? (Escribe la tecnología o 'ok' para salir)").toLowerCase();
 
-//   while (intentos < 3) {
-//     if (numSorteado === num) {
-//       alert("¡Felicitaciones, acertaste!");
-//       return;
-//     } else {
-//       num = parseInt(prompt(`Intento ${intentos + 1}: Número incorrecto. Intenta nuevamente:`));
-//     }
-//     intentos++;
-//   }
+    if (nuevaTecnologia === "ok") {
+      break;
+    }
 
-//   alert("¡Lo siento! Has agotado tus intentos. El número era" + numSorteado);
+    tecnologias.push(nuevaTecnologia);
+    alert(`¡Genial! Aprender ${nuevaTecnologia} te abrirá nuevas oportunidades.`);
+  }
 
-// };
+  alert(`Resumen de tu aprendizaje: \nÁrea elegida: ${area}\nEspecialización: ${especializacion}\nTecnologías adicionales: ${tecnologias.join(", ")}`);
+}
 
-// adividaNum()
+iniciarJuego();
+
+// Desafio dia 4
+
+let min = 1;
+let max = 10;
+let num = parseInt(prompt("Ingrese un número del 1 al 10"));
+
+function adividaNum() {
+  let numSorteado = Math.floor(Math.random() * (max - min + 1) + min);
+  console.log("numero sorteado:", numSorteado);
+  let intentos = 0;
+
+  while (intentos < 3) {
+    if (numSorteado === num) {
+      alert("¡Felicitaciones, acertaste!");
+      return;
+    } else {
+      num = parseInt(prompt(`Intento ${intentos + 1}: Número incorrecto. Intenta nuevamente:`));
+    }
+    intentos++;
+  }
+
+  alert("¡Lo siento! Has agotado tus intentos. El número era" + numSorteado);
+
+};
+
+adividaNum()
 
 // Desafio Dia 5
 
@@ -165,7 +165,13 @@ while (true) {
   listaDeCompras[categoria].push(alimento);
 };
 
-console.log("Lista de compras:");
+let mensaje = "🛒 Lista de compras:\n\n";
 for (let categoria in listaDeCompras) {
-  console.log(`${categoria.charAt(0).toUpperCase() + categoria.slice(1)}: ${listaDeCompras[categoria].join(", ")}`);
+  mensaje += `📌 ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
+  listaDeCompras[categoria].forEach(alimento => {
+    mensaje += `   • ${alimento}\n`;
+  });
+  mensaje += "\n";
 }
+
+alert(mensaje);
