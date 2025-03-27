@@ -147,31 +147,95 @@ function adividaNum() {
 
 adividaNum()
 
-// Desafio Dia 5
+// Desafio Dia 5 y Dia 6
 
 let listaDeCompras = {};
 
-while (true) {
-  let agregar = prompt("¿Deseas agregar un alimento a la lista de compras? (Si/No)").toLowerCase();
-
-  if (agregar !== "si") break;
-  let alimento = prompt("¿Que alimento deseas agregar?");
-  let categoria = prompt("¿En que categoria encaja este alimento? (Frutas, Lácteos, Congelados, Dulces, etc.)").toLowerCase();
-
-  if (!listaDeCompras[categoria]) {
-    listaDeCompras[categoria] = [];
+function mostrarLista() {
+  if (Object.keys(listaDeCompras).length === 0) {
+    alert("🛒 La lista de compras está vacía.");
+    return;
   }
 
-  listaDeCompras[categoria].push(alimento);
-};
-
-let mensaje = "🛒 Lista de compras:\n\n";
-for (let categoria in listaDeCompras) {
-  mensaje += `📌 ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
-  listaDeCompras[categoria].forEach(alimento => {
-    mensaje += `   • ${alimento}\n`;
-  });
-  mensaje += "\n";
+  let mensaje = "🛒 Lista de compras:\n\n";
+  for (let categoria in listaDeCompras) {
+    mensaje += `📌 ${categoria}:\n`;
+    listaDeCompras[categoria].forEach(item => {
+      mensaje += `   • ${item}\n`;
+    });
+    mensaje += "\n";
+  }
+  alert(mensaje);
 }
 
-alert(mensaje);
+while (true) {
+  let accion = prompt("¿Deseas Agregar, Eliminar o Salir?").toLowerCase();
+
+  if (accion === "salir") {
+    mostrarLista();
+    break;
+  }
+
+  if (accion === "agregar") {
+    let alimento = prompt("¿Qué alimento deseas agregar?");
+    let categoria = prompt("¿A qué categoría pertenece? (Si no existe se creará)").toLowerCase();
+
+    if (!listaDeCompras[categoria]) {
+      listaDeCompras[categoria] = [];
+      alert(`✅ La categoría "${categoria}" fue creada.`);
+    }
+
+    listaDeCompras[categoria].push(alimento);
+    alert(`🍽️ "${alimento}" agregado a la categoría "${categoria}".`);
+    mostrarLista();
+
+  } else if (accion === "eliminar") {
+    if (Object.keys(listaDeCompras).length === 0) {
+      alert("🚫 No hay categorías aún.");
+      continue;
+    }
+
+    let categoria = prompt("¿De qué categoría deseas eliminar?").toLowerCase();
+
+    if (!listaDeCompras[categoria]) {
+      alert("⚠️ Esa categoría no existe.");
+      continue;
+    }
+
+    if (listaDeCompras[categoria].length === 0) {
+      alert("🚫 Esa categoría está vacía.");
+      continue;
+    }
+
+    let mensaje = "📝 Alimentos actuales:\n";
+    listaDeCompras[categoria].forEach((item, index) => {
+      mensaje += `${index + 1}. ${item}\n`;
+    });
+
+    let alimento = prompt(`${mensaje}\nEscribe el nombre exacto del alimento que quieres eliminar:`);
+
+    if (listaDeCompras[categoria].includes(alimento)) {
+      let posicion = listaDeCompras[categoria].indexOf(alimento);
+      listaDeCompras[categoria].splice(posicion, 1);
+      alert(`❌ "${alimento}" eliminado de "${categoria}".`);
+
+      if (listaDeCompras[categoria].length === 0) {
+        delete listaDeCompras[categoria];
+        alert(`⚠️ La categoría "${categoria}" ha quedado vacía y fue eliminada.`);
+      }
+
+      mostrarLista();
+
+    } else {
+      alert("⚠️ No encontramos ese alimento en la lista.");
+    }
+
+  } else {
+    alert("❗ Escribe solo: Agregar, Eliminar o Salir");
+  }
+};
+
+
+
+
+
