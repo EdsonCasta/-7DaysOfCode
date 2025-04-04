@@ -1,6 +1,6 @@
 // Desafio dia 01
 
-let numeroUn = 1    
+let numeroUn = 1
 
 let stringUn = '1'
 
@@ -235,7 +235,76 @@ while (true) {
   }
 };
 
+// Desafio Dia 7
 
+function suma(a, b) {
+  return a + b;
+};
+
+function resta(a, b) {
+  return a - b;
+};
+
+function multiplicacion(a, b) {
+  return a * b;
+};
+
+function divicion(a, b) {
+  if (b === 0) {
+    return "🚫 No se puede dividir por cero.";
+  }
+  return a / b;
+};
+
+while (true) {
+  let operacion = prompt(
+    "¿Qué operación deseas realizar?\n" +
+    "1 - Sumar\n" +
+    "2 - Restar\n" +
+    "3 - Multiplicar\n" +
+    "4 - Dividir\n" +
+    "5 - Salir"
+  )
+
+  if (operacion === "5") {
+    alert("👋 Hasta la próxima");
+    break;
+  }
+
+  if (!["1", "2", "3", "4"].includes(operacion)) {
+    alert("⚠️ Opción inválida. Intenta de nuevo.");
+    continue;
+  }
+
+  let num1 = parseFloat(prompt("Ingresa el primer número:"));
+  let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+
+  if (isNaN(num1) || isNaN(num2)) {
+    alert("🚫 Entrada inválida. Debes ingresar números.");
+    continue;
+  }
+
+  let resultado;
+
+  switch (operacion) {
+    case "1":
+      resultado = suma(num1, num2);
+      alert(`🔢 Resultado: ${num1} + ${num2} = ${resultado}`);
+      break;
+    case "2":
+      resultado = resta(num1, num2);
+      alert(`🔢 Resultado: ${num1} + ${num2} = ${resultado}`);
+      break;
+    case "3":
+      resultado = multiplicacion(num1, num2);
+      alert(`🔢 Resultado: ${num1} + ${num2} = ${resultado}`);
+      break;
+    case "4":
+      resultado = divicion(num1, num2);
+      alert(`🔢 Resultado: ${num1} + ${num2} = ${resultado}`);
+      break;
+  }
+};
 
 
 
