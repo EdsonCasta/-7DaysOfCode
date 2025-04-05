@@ -16,38 +16,26 @@ let stringDiez = '10'
 
 
 if (numeroUn == stringUn) {
-
   console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')
-
 } else {
-
   console.log('Las variables numeroUn y stringUn no tienen el mismo valor')
-
-}
-
+};
 
 
 if (numeroTreinta === stringTreinta) {
-
   console.log('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')
-
 } else {
-
   console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
-
-}
-
+};
 
 
 if (numeroDiez == stringDiez) {
-
   console.log('Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes')
-
 } else {
-
   console.log('Las variables numeroDiez y stringDiez no tienen el mismo valor')
+};
 
-}
+
 
 // Desafio dia 02
 
@@ -58,6 +46,8 @@ let edad = prompt("¿Cuántos años tienes?");
 let lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?");
 
 console.log(`Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`);
+
+
 
 // EJERCICIO OPCIONAL
 
@@ -75,6 +65,8 @@ function respuesta() {
 };
 
 respuesta();
+
+
 
 // Desafio dia 3
 
@@ -116,9 +108,11 @@ function iniciarJuego() {
   }
 
   alert(`Resumen de tu aprendizaje: \nÁrea elegida: ${area}\nEspecialización: ${especializacion}\nTecnologías adicionales: ${tecnologias.join(", ")}`);
-}
+};
 
 iniciarJuego();
+
+
 
 // Desafio dia 4
 
@@ -145,7 +139,9 @@ function adividaNum() {
 
 };
 
-adividaNum()
+adividaNum();
+
+
 
 // Desafio Dia 5 y Dia 6
 
@@ -235,6 +231,8 @@ while (true) {
   }
 };
 
+
+
 // Desafio Dia 7
 
 function suma(a, b) {
@@ -305,6 +303,3 @@ while (true) {
       break;
   }
 };
-
-
-
